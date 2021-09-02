@@ -2,6 +2,7 @@ package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.api.DogOperations;
 import com.example.springbootdemo.model.Dog;
+import com.example.springbootdemo.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import java.util.List;
 public class DogController implements DogOperations {
     @Autowired
     DogService dogService;
+
 
     public ResponseEntity getAllDogs() {
         try {
