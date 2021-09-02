@@ -9,16 +9,16 @@ import java.util.List;
 
 @RequestMapping("/dog")
 public interface DogOperations {
-    @GetMapping("/")
+    @GetMapping("")
     ResponseEntity getAllDogs();
 
     @GetMapping("/{id}")
     ResponseEntity getDog(@PathVariable(value = "id") Long id);
 
-    @PostMapping("/")
+    @PostMapping("")
     ResponseEntity addDog(@RequestBody List<Dog> employeeList);
 
-    @PutMapping("/")
+    @PutMapping("")
     ResponseEntity updateDog(@RequestBody List<Dog> employeeList);
 
     @DeleteMapping("/{id}")
